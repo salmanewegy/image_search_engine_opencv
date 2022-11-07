@@ -15,7 +15,7 @@ if __name__== "__main__":
     for i in range (number_of_imgs):
         img_cv2 = cv2.imread(dataset[i])
         feature = fe.describe(img_cv2)
-        feature_path = Path("./static/feature" + str(i) + ".npy")
+        feature_path = Path("./static/features/feature{}.npy".format(i))
         print(feature_path)
 
         np.save(feature_path, feature)
